@@ -330,6 +330,34 @@ a {
     transform: scale(1.06);
 }
 
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2.5rem 1rem 1rem;
+    background: linear-gradient(to top, rgba(58, 47, 43, 0.95), transparent);
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover .gallery-caption {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .gallery-caption {
+        transform: translateY(0);
+        padding: 2rem 0.5rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
+
 .slider-btn {
     position: absolute;
     top: 50%;
